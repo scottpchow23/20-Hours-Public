@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A396CEA0FE8A91FC07FB62B17AB95C8F594FD32C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3A75D0E022793CD2E69D80CA82234E65C71DC3AC" : 0,
+    "A396CEA0FE8A91FC07FB62B17AB95C8F594FD32C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DCC06FE7-5851-46C5-9D4F-DD6E0A93E527",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3A75D0E022793CD2E69D80CA82234E65C71DC3AC" : "Make%20School%20Projects\/MakeSchoolNotes-Swift-V2-Starter-master\/",
+    "A396CEA0FE8A91FC07FB62B17AB95C8F594FD32C" : "20-Hours\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "20 Hours",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "20 Hours\/20 Hours.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/scottpchow23\/Notes-MakeSchool.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A75D0E022793CD2E69D80CA82234E65C71DC3AC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/scottpchow23\/20-Hours.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A396CEA0FE8A91FC07FB62B17AB95C8F594FD32C"
+    }
+  ]
+}
