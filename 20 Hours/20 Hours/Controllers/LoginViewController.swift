@@ -42,6 +42,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     
     @IBAction func emailPasswordLoginButtonPressed(sender: AnyObject) {
         emailPasswordLoginButton.enabled = false
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         if let email = emailTextField.text {
             if email != "" {
                 if let password = passwordTextField.text {
@@ -162,5 +164,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

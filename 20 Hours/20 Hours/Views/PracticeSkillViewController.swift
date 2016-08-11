@@ -90,6 +90,10 @@ class PracticeSkillViewController: UIViewController {
             startTime = NSDate.timeIntervalSinceReferenceDate()
             practiceButton.setTitle("Pause", forState: .Normal)
         } else {
+            let newSkill = Skill() //doesn't save it when the timer is still running
+            newSkill.skillName = skill.skillName
+            newSkill.totalTimeSpent = practiceSessionElapsedTime + skill.totalTimeSpent + currentSession
+            FirebaseHelper.sharedInstance.saveSkill(newSkill)
             FirebaseHelper.sharedInstance.notificationSent = true
             practiceSessionElapsedTime = currentSession
             print(currentSession)

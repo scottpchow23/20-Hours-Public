@@ -22,6 +22,7 @@ class EditSkillViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "SaveEdit") && (skillNameTextField.text != "") {
             print("Save button tapped")
+            skillNameTextField.resignFirstResponder()
             if showDeleteButton {
                 if let skillToBeEdited = skillToBeEdited {
                     let practiceSkillViewController = segue.destinationViewController as? PracticeSkillViewController
@@ -43,6 +44,7 @@ class EditSkillViewController: UIViewController {
     }
 
     @IBAction func deleteButtonPressed(sender: AnyObject) {
+        skillNameTextField.resignFirstResponder()
         if let deleteAlert = deleteAlert {
             self.presentViewController(deleteAlert, animated: true, completion: nil)
         }
@@ -59,6 +61,7 @@ class EditSkillViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        skillNameTextField.delegate = self
         deleteSkillButton.hidden = !showDeleteButton
         saveButton.enabled = false
         if showDeleteButton {
@@ -85,4 +88,11 @@ class EditSkillViewController: UIViewController {
     }
     
 
+}
+
+extension EditSkillViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

@@ -43,8 +43,9 @@
 		B8A7BC261D3E7E6900F9D6CA /* SkillCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A7BC251D3E7E6900F9D6CA /* SkillCollectionViewController.swift */; };
 		B8A7BC281D3E7EC200F9D6CA /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A7BC271D3E7EC200F9D6CA /* SkillCollectionViewCell.swift */; };
 		B8A7BC2A1D3E8AB600F9D6CA /* SkillListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A7BC291D3E8AB500F9D6CA /* SkillListViewController.swift */; };
-		B8DA2DD71D5A467E0000E9E7 /* Page View Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DA2DD61D5A467E0000E9E7 /* Page View Intro.storyboard */; };
-		B8DA2DDA1D5A49D20000E9E7 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DA2DD91D5A49D20000E9E7 /* PageViewController.swift */; };
+		B8DA2DD71D5A467E0000E9E7 /* PageViewIntro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DA2DD61D5A467E0000E9E7 /* PageViewIntro.storyboard */; };
+		B8DA2DDA1D5A49D20000E9E7 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DA2DD91D5A49D20000E9E7 /* TutorialPageViewController.swift */; };
+		B8DA2DDC1D5BA50F0000E9E7 /* ExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DA2DDB1D5BA50F0000E9E7 /* ExplanationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,8 +90,9 @@
 		B8A7BC251D3E7E6900F9D6CA /* SkillCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewController.swift; sourceTree = "<group>"; };
 		B8A7BC271D3E7EC200F9D6CA /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8A7BC291D3E8AB500F9D6CA /* SkillListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillListViewController.swift; sourceTree = "<group>"; };
-		B8DA2DD61D5A467E0000E9E7 /* Page View Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Page View Intro.storyboard"; path = "20 Hours/Page View Intro.storyboard"; sourceTree = SOURCE_ROOT; };
-		B8DA2DD91D5A49D20000E9E7 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		B8DA2DD61D5A467E0000E9E7 /* PageViewIntro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PageViewIntro.storyboard; path = "20 Hours/PageViewIntro.storyboard"; sourceTree = SOURCE_ROOT; };
+		B8DA2DD91D5A49D20000E9E7 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		B8DA2DDB1D5BA50F0000E9E7 /* ExplanationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationViewController.swift; sourceTree = "<group>"; };
 		D5C9CF49FFCE511A27F44EBD /* Pods-20 Hours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20 Hours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-20 Hours/Pods-20 Hours.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,8 +247,9 @@
 		B8DA2DD81D5A49B40000E9E7 /* Page View Intro */ = {
 			isa = PBXGroup;
 			children = (
-				B8DA2DD61D5A467E0000E9E7 /* Page View Intro.storyboard */,
-				B8DA2DD91D5A49D20000E9E7 /* PageViewController.swift */,
+				B8DA2DD61D5A467E0000E9E7 /* PageViewIntro.storyboard */,
+				B8DA2DD91D5A49D20000E9E7 /* TutorialPageViewController.swift */,
+				B8DA2DDB1D5BA50F0000E9E7 /* ExplanationViewController.swift */,
 			);
 			path = "Page View Intro";
 			sourceTree = "<group>";
@@ -327,7 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8DA2DD71D5A467E0000E9E7 /* Page View Intro.storyboard in Resources */,
+				B8DA2DD71D5A467E0000E9E7 /* PageViewIntro.storyboard in Resources */,
 				B859CB361D232077005A9D42 /* LaunchScreen.storyboard in Resources */,
 				B897BFE51D47CC67008C9363 /* GoogleService-Info.plist in Resources */,
 				B859CB331D232077005A9D42 /* Assets.xcassets in Resources */,
@@ -392,6 +395,7 @@
 			files = (
 				B84C2EBE1D5298FB00B83923 /* CreateAccountViewController.swift in Sources */,
 				B8A7BC281D3E7EC200F9D6CA /* SkillCollectionViewCell.swift in Sources */,
+				B8DA2DDC1D5BA50F0000E9E7 /* ExplanationViewController.swift in Sources */,
 				B849FCDD1D4A801300EE85F2 /* YoutubeSearch.swift in Sources */,
 				B897BFF41D4912C3008C9363 /* GoogleSearchTableViewCell.swift in Sources */,
 				B886A6A51D2C516900DF54AC /* LoginViewController.swift in Sources */,
@@ -404,7 +408,7 @@
 				B8A7BC221D38417300F9D6CA /* AnonUser.swift in Sources */,
 				B859CB481D23265A005A9D42 /* RealmHelper.swift in Sources */,
 				B81E55C61D500A4200125609 /* DismissAnimator.swift in Sources */,
-				B8DA2DDA1D5A49D20000E9E7 /* PageViewController.swift in Sources */,
+				B8DA2DDA1D5A49D20000E9E7 /* TutorialPageViewController.swift in Sources */,
 				B81E55C91D50144000125609 /* Interactor.swift in Sources */,
 				B897BFF01D480F79008C9363 /* GoogleSearchViewController.swift in Sources */,
 				B81E55C31D4FB83D00125609 /* TutorialWebViewController.swift in Sources */,

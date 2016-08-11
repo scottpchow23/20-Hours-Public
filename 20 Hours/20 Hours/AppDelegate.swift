@@ -24,11 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
-        // If the app starts in offline mode, nothing is actually saved; problem with offline Firebase
         FIRDatabase.database().persistenceEnabled = true
         if FIRAuth.auth()?.currentUser == nil {
             AuthHelper.signInAnonymously {
-//                FirebaseHelper.sharedInstance.tempSkills.removeAll()
                 FirebaseHelper.sharedInstance.retrieveSkills()
             }
         } else {
@@ -36,6 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         FirebaseHelper.sharedInstance.detectConnectionState()
         registerForPushNotifications(application)
+        
+        if launchCount < 1 {
+            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "PageViewIntro", bundle: nil)
+            let tutorialPageViewController: TutorialPageViewController = mainStoryBoard.instantiateInitialViewController() as! TutorialPageViewController
+            window?.rootViewController = tutorialPageViewController
+        }
+        
         NSUserDefaults.standardUserDefaults().setInteger(launchCount+1, forKey: "launchCount")
         NSUserDefaults.standardUserDefaults().synchronize()
         return true

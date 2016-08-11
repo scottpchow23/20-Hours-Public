@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ows-Nr-j9D">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="50O-5k-nsy">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ows-Nr-j9D" customClass="TutorialPageViewController" customModule="_0_Hours" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbg-4L-wCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="32"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IIA-2g-tV2">
+            <objects>
+                <viewController storyboardIdentifier="Welcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XwE-Be-Rt9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qcw-l0-PN1"/>
+                        <viewControllerLayoutGuide type="bottom" id="eEM-PA-4e1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a7h-4Y-aQe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20 Hours Icon" translatesAutoresizingMaskIntoConstraints="NO" id="c9s-zo-wef">
+                                <rect key="frame" x="90" y="97" width="420" height="405"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c9s-zo-wef" secondAttribute="height" multiplier="55:53" id="MCq-FY-JFZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWg-vH-AFe">
+                                <rect key="frame" x="263" y="529" width="74" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="W0L-dh-s1N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tds-ZG-w4Y">
+                                <rect key="frame" x="222" y="28" width="157" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="Lid-OX-aSB"/>
+                                    <constraint firstAttribute="height" constant="132" id="Zk4-Ix-QLt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69019607839999997" green="0.20784313730000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="c9s-zo-wef" firstAttribute="centerY" secondItem="a7h-4Y-aQe" secondAttribute="centerY" id="DoP-sP-XpZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yWg-vH-AFe" secondAttribute="trailing" constant="243" id="Ntt-MB-6v5"/>
+                            <constraint firstItem="yWg-vH-AFe" firstAttribute="leading" secondItem="a7h-4Y-aQe" secondAttribute="leadingMargin" constant="243" id="cP5-ZM-enj"/>
+                            <constraint firstItem="Tds-ZG-w4Y" firstAttribute="centerX" secondItem="a7h-4Y-aQe" secondAttribute="centerX" id="hd2-Mh-GXP"/>
+                            <constraint firstItem="c9s-zo-wef" firstAttribute="leading" secondItem="a7h-4Y-aQe" secondAttribute="leadingMargin" constant="70" id="jLR-2N-1MJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c9s-zo-wef" secondAttribute="trailing" constant="70" id="jRx-fh-zhZ"/>
+                            <constraint firstItem="Tds-ZG-w4Y" firstAttribute="top" secondItem="Qcw-l0-PN1" secondAttribute="bottom" constant="8" id="n1C-PT-QQl"/>
+                            <constraint firstItem="eEM-PA-4e1" firstAttribute="top" secondItem="yWg-vH-AFe" secondAttribute="bottom" constant="20" id="nmT-wX-nNO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWq-vx-IYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="723"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RmM-c7-cP2">
+            <objects>
+                <viewController storyboardIdentifier="Explanation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iat-ID-wjt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C8H-L1-yKW"/>
+                        <viewControllerLayoutGuide type="bottom" id="SXf-KB-C6D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jnB-RI-hek">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZK-Lm-AJF">
+                                <rect key="frame" x="30" y="110" width="540" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="vMC-yD-k9L"/>
+                                </constraints>
+                                <string key="text">It only takes 20 hours of focused practice to acquire a new skill. That's about 45 minutes a day for a month. Be sure to reflect often on how and what you practice to accelerate your learning.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ry2-PG-WhJ" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="230" y="537" width="140" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="H6k-xs-4DK"/>
+                                    <constraint firstAttribute="width" constant="140" id="cSr-xe-F5N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Get started!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Thj-X0-fGd" kind="presentation" id="iw6-7N-9oF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's not about how quickly you complete your 20 hours, but how much you can learn in those 20 hours." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS3-x6-0E9">
+                                <rect key="frame" x="30" y="288" width="540" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="C8Q-QV-7Ht"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69019607839999997" green="0.20784313730000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ry2-PG-WhJ" firstAttribute="centerX" secondItem="jnB-RI-hek" secondAttribute="centerX" id="0lR-oH-uxa"/>
+                            <constraint firstItem="4ZK-Lm-AJF" firstAttribute="leading" secondItem="jnB-RI-hek" secondAttribute="leadingMargin" constant="10" id="1kV-a5-olK"/>
+                            <constraint firstItem="4ZK-Lm-AJF" firstAttribute="top" secondItem="C8H-L1-yKW" secondAttribute="bottom" constant="90" id="5cz-gu-od3"/>
+                            <constraint firstItem="fS3-x6-0E9" firstAttribute="width" secondItem="4ZK-Lm-AJF" secondAttribute="width" id="D7T-oB-5U2"/>
+                            <constraint firstItem="fS3-x6-0E9" firstAttribute="centerX" secondItem="jnB-RI-hek" secondAttribute="centerX" id="Dnn-sJ-gkM"/>
+                            <constraint firstItem="fS3-x6-0E9" firstAttribute="top" secondItem="4ZK-Lm-AJF" secondAttribute="bottom" id="InY-Uc-0z9"/>
+                            <constraint firstItem="SXf-KB-C6D" firstAttribute="top" secondItem="Ry2-PG-WhJ" secondAttribute="bottom" constant="30" id="WKu-cu-M3M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ZK-Lm-AJF" secondAttribute="trailing" constant="10" id="van-Dy-StV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seh-8e-KOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="723"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="5ld-iF-kht">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Thj-X0-fGd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fe-5V-Kqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571.5" y="838"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="20 Hours Icon" width="633" height="608"/>
+    </resources>
+</document>

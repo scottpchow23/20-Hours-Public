@@ -35,6 +35,9 @@ class CreateAccountViewController: UIViewController {
 
     @IBAction func createButtonPressed(sender: AnyObject) {
         createAccountButton.enabled = false
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        confirmPasswordTextField.resignFirstResponder()
         if let email = emailTextField.text {
             if email != "" {
                 if let password = passwordTextField.text {
@@ -80,5 +83,8 @@ class CreateAccountViewController: UIViewController {
 
 
 extension CreateAccountViewController: UITextFieldDelegate {
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

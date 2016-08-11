@@ -79,6 +79,7 @@ class MenuTableViewController: UITableViewController {
                                 self.tableView.cellForRowAtIndexPath(indexPath)?.userInteractionEnabled = true
                                 self.revealViewController().revealToggleAnimated(true)
                                 frontViewController?.skillCollectionViewController?.skills.removeAll()
+                                frontViewController?.loginReminderButton.hidden = false
                                 frontViewController?.skillCollectionViewController?.collectionView?.reloadData()
                             }
                             FirebaseHelper.sharedInstance.retrieveSkills()

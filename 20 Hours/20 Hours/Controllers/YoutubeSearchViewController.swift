@@ -56,18 +56,25 @@ extension YoutubeSearchViewController: UITableViewDelegate, UITableViewDataSourc
 }
 
 extension YoutubeSearchViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         if youtubeSearchBar.text != nil {
             let searchString = youtubeSearchBar!.text?.stringByReplacingOccurrencesOfString(" ", withString: "+")
+            searchBar.showsCancelButton = false
+            searchBar.resignFirstResponder()
             if let searchString = searchString {
                 AlamofireHelper.sharedInstance.youtubeSearchRequest(searchString) {
                     self.youtubeSearchTableView.reloadData()
                 }
             }
         }
-    }
-    
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        self.view.endEditing(true)
     }
 }

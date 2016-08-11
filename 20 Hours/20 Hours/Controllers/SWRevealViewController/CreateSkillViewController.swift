@@ -14,7 +14,7 @@ class CreateSkillViewController: UIViewController {
     @IBOutlet weak var skillNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        skillNameTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -40,5 +40,12 @@ class CreateSkillViewController: UIViewController {
         } else if segue.identifier == "CancelNew" {
             print("Cancel button tapped")
         }
+    }
+}
+
+extension CreateSkillViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

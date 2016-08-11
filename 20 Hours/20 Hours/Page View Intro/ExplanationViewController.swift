@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  ExplanationViewController.swift
 //  20 Hours
 //
-//  Created by Scott P. Chow on 8/9/16.
+//  Created by Scott P. Chow on 8/10/16.
 //  Copyright © 2016 Scott Chow. All rights reserved.
 //
 
 import UIKit
 
-class PageViewController: UIPageViewController {
+class ExplanationViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,5 @@ class PageViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

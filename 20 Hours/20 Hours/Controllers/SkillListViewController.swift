@@ -23,6 +23,7 @@ class SkillListViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var placeholderStackView: UIStackView!
 
+    @IBOutlet weak var loginReminderButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +43,19 @@ class SkillListViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        loginReminderButton.hidden = true
+        
+        if FirebaseHelper.sharedInstance.user != nil {
+            if FirebaseHelper.sharedInstance.user!.anonymous == true {
+                loginReminderButton.hidden = false
+            }
+        }
+        
         self.skills = FirebaseHelper.sharedInstance.tempSkills
         
-//        self.skills.sortInPlace {$0.totalTimeSpent > $1.totalTimeSpent}
         FirebaseHelper.sharedInstance.completion = {
             self.skills = FirebaseHelper.sharedInstance.tempSkills
-//            self.skills.sortInPlace {$0.totalTimeSpent > $1.totalTimeSpent}
-            
             self.skillCollectionViewController?.collectionView?.reloadData()
         }
         

@@ -31,6 +31,7 @@ class ForgotPasswordViewController: UIViewController {
 
     @IBAction func resetButtonPressed(sender: AnyObject) {
         resetButton.enabled = false
+        emailTextField.resignFirstResponder()
         if let email = emailTextField.text {
             FIRAuth.auth()?.sendPasswordResetWithEmail(email) { error in
                 if let error = error {
@@ -50,5 +51,8 @@ class ForgotPasswordViewController: UIViewController {
 }
 
 extension ForgotPasswordViewController: UITextFieldDelegate {
-
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

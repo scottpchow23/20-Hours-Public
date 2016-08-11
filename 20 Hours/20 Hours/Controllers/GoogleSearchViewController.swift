@@ -29,6 +29,9 @@ class GoogleSearchViewController: UIViewController {
         AlamofireHelper.sharedInstance.youtubeSearchRequest(searchString! + "+tutorial", completion: nil)
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        resignFirstResponder()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         googleSearchTableView.panGestureRecognizer.addTarget(self, action: #selector(GoogleSearchViewController.handleGesture(_:)))
@@ -109,9 +112,20 @@ extension GoogleSearchViewController: UITableViewDelegate, UITableViewDataSource
 
 extension GoogleSearchViewController: UISearchBarDelegate {
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
         let searchString = googleSearchBar!.text?.stringByReplacingOccurrencesOfString(" ", withString: "+")
-
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
         if searchString != nil {
             AlamofireHelper.sharedInstance.googleSearchRequest(searchString!) {
                 self.googleSearchTableView.reloadData()
@@ -119,7 +133,5 @@ extension GoogleSearchViewController: UISearchBarDelegate {
         }
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        self.view.endEditing(true)
-    }
+//    searchBarRetu
 }

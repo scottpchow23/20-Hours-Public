@@ -19,8 +19,8 @@ class AlamofireHelper {
     
     func googleSearchRequest(searchTerm: String, completion: (()-> Void)?) {
         let apiToContact = "https://www.googleapis.com/customsearch/v1?"
-            + "&key=AIzaSyAXCX9kgrDtOGCNpVklwBbk8DvKRkNxnFE"
-            + "&cx=016402819334438694395:5rtivhzdo1w"
+            + "&key="
+            + "&cx="
             + "&q="
             + searchTerm
 //        print(apiToContact)
@@ -60,7 +60,7 @@ class AlamofireHelper {
             + "&maxResults=50"
             + "&type=video"
             + "&videoEmbeddable=true"
-            + "&key=AIzaSyAXCX9kgrDtOGCNpVklwBbk8DvKRkNxnFE"
+            + "&key="
             + "&q="
             + searchTerm
 //        print(apiToContact)
